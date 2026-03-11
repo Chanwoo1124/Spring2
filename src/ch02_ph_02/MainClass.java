@@ -12,6 +12,8 @@ public class MainClass {
         CalMul calMul = new CalMul();
         CalDiv calDiv = new CalDiv();
 
+
+
         calculator.calAdd(10,5,calAdd);
         calculator.calAdd(10,5,calSub);
         calculator.calAdd(10,5,calMul);
