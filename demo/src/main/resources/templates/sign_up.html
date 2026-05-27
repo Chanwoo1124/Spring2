@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SIGN UP</title>
+</head>
+<body>
+<h1>회원가입</h1>
+<form action="/signUpConfirm" th:object="${memberVo}" method="post">
+    <p>
+        <label>아이디</label>
+        <input type="text" th:field="*{id}" name="m_id">
+    </p>
+    <p>
+        <label>비밀번호</label>
+        <input type="password" th:field="*{pw}" name="m_pw">
+    </p>
+    <p>
+        <label>메일 주소</label>
+        <input type="email" th:field="*{email}" name="m_mail">
+    </p>
+    <p>
+        <label>연락처</label>
+        <input type="text" th:field="*{phone}" name="m_phone">
+    </p>
+    <p>
+        <button type="submit">SIGN UP</button>
+        <button type="reset">CANCEL</button>
+    </p>
+</form>
+<p>
+    <a th:href="@{/}">홈으로</a>
+    |
+    <a th:href="@{/signIn}">로그인</a>
+</p>
+</body>
+</html>
